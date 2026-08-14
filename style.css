@@ -992,3 +992,47 @@ footer { background: var(--dark-neutral); padding: 80px 0 20px; color: white; }
     scroll-behavior: auto !important;
   }
 }
+/* --- تنسيقات دائرة السعر بجوار اسم الباقة --- */
+.package-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* المسافة بين اسم الباقة ودائرة السعر */
+    margin-bottom: 25px;
+}
+
+.package-title-wrapper h3 {
+    margin: 0; /* لمنع أي هوامش زائدة حول العنوان */
+    color: #1a233a; /* لون اسم الباقة */
+}
+
+.price-circle {
+    background-color: #b5985a; /* لون الدائرة الذهبي (متناسق مع شارة الأكثر متابعة) */
+    color: #ffffff;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* ظل خفيف للدائرة */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* تأثير بسيط عند مرور الماوس على الدائرة */
+.price-circle:hover {
+    transform: scale(1.05);
+}
+
+.price-amount {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.price-currency {
+    font-size: 11px;
+    font-weight: normal;
+}
