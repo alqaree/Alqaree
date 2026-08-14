@@ -529,31 +529,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // تجميع بيانات الفورم
             var formData = new FormData(form);
             
-            // إرسال البيانات
+           // إرسال البيانات
             fetch(scriptURL, { method: 'POST', body: formData })
                 .then(response => {
-                    // رسالة النجاح
-                    message.style.display = 'block';
-                    message.style.color = '#2ecc71';
-                    message.innerText = currentLang === 'en' ? 'Your booking was successful! We will contact you soon.' : 'تم تسجيل موعدك بنجاح! سنتواصل معك قريباً.';
+                    // تغيير نص الزر لإعلام المستخدم أنه يتم تحويله
+                    submitBtn.innerText = currentLang === 'en' ? 'Redirecting...' : 'جاري التحويل...';
                     
-                    // إعادة تهيئة الفورم والزر
-                    form.reset();
-                    submitBtn.innerText = originalBtnText;
-                    submitBtn.disabled = false;
-                    
-                    // إغلاق النافذة المنبثقة بعد 3 ثواني
-                    setTimeout(() => {
-                        var modal = document.getElementById('booking-modal');
-                        if (modal) {
-                            modal.setAttribute('aria-hidden', 'true');
-                            document.body.classList.remove('modal-open');
-                        }
-                        message.style.display = 'none';
-                    }, 3000);
+                    // 🚀 التعديل السحري: التحويل فوراً لصفحة الشكر بعد نجاح الإرسال
+                    window.location.href = 'thank-you.html'; 
                 })
                 .catch(error => {
-                    // رسالة الخطأ
+                    // رسالة الخطأ تبقى كما هي في حالة وجود مشكلة في الإرسال
                     message.style.display = 'block';
                     message.style.color = '#e74c3c';
                     message.innerText = currentLang === 'en' ? 'An error occurred, please try again.' : 'حدث خطأ أثناء التسجيل، يرجى المحاولة مرة أخرى.';
