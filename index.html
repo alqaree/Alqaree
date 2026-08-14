@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">أكاديمية القارئ | تعليم القرآن الكريم والتجويد والعلوم الشرعية أونلاين</title>
+
+<!-- Facebook Domain Verification -->
+<meta name="facebook-domain-verification" content="b0ya1igfwfctsyfif7f6wbqthtu5ta" />
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1614909166922702');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1614909166922702&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<meta name="description" content="أكاديمية القارئ لتعليم القرآن الكريم وحفظه، والتجويد وأحكامه، والتفسير، والعلوم الشرعية، ونور البيان للأطفال، أونلاين مع معلمين متخصصين وحصة تجريبية مجانية.">
+<meta name="theme-color" content="#1B2A4A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a class="nav-logo" href="#">
+    <img src="assets/logo.jpg" alt="أكاديمية القارئ">
+    <div class="nav-logo-text">
+      <div class="nav-logo-ar" data-i18n="logo_ar">أكاديمية القارئ</div>
+      <div class="nav-logo-en">ALQAREE ACADEMY</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" data-i18n="nav_home">الرئيسية</a></li>
+    <li><a href="#about" data-i18n="nav_about">عن الأكاديمية</a></li>
+    <li><a href="#services" data-i18n="nav_services">البرامج</a></li>
+    <li><a href="#features" data-i18n="nav_features">مميزاتنا</a></li>
+    <li><a href="#process" data-i18n="nav_process">كيف نعمل</a></li>
+    <li><a href="#faq" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="theme-toggle-btn" aria-label="تبديل الوضع الليلي والنهاري">🌙</button>
+    <button class="lang-toggle" id="lang-toggle-btn" aria-label="تبديل اللغة">EN</button>
+    <button class="nav-cta open-modal-btn" data-i18n="book_now">احجز الآن</button>
+  </div>
+  
+  <button class="nav-hamburger" id="menu-btn" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#" class="mobile-link" data-i18n="nav_home">الرئيسية</a>
+  <a href="#about" class="mobile-link" data-i18n="nav_about">عن الأكاديمية</a>
+  <a href="#services" class="mobile-link" data-i18n="nav_services">البرامج</a>
+  <a href="#features" class="mobile-link" data-i18n="nav_features">مميزاتنا</a>
+  <a href="#process" class="mobile-link" data-i18n="nav_process">كيف نعمل</a>
+  <a href="#faq" class="mobile-link" data-i18n="nav_faq">الأسئلة الشائعة</a>
+  <div class="mobile-actions">
+    <button class="theme-toggle" id="mobile-theme-btn">🌙 الوضع الليلي</button>
+    <button class="lang-toggle" id="mobile-lang-btn">English</button>
+  </div>
+  <button class="nav-cta open-modal-btn mobile-link mobile-cta" data-i18n="book_now">احجز الآن</button>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-pattern"></div>
+  <div class="container hero-content">
+    <div class="hero-text reveal visible">
+      <div class="hero-badge" data-i18n="hero_badge">🎓 منصة تعليمية متخصصة</div>
+      <h1 class="hero-title"><span data-i18n="hero_title_1">أكاديمية القارئ</span> <span data-i18n="hero_title_2">لتعليم القرآن وعلومه أونلاين</span></h1>
+      <p class="hero-sub" data-i18n="hero_sub">تعلم القرآن الكريم والتجويد وأحكامه، والتفسير والعلوم الشرعية، والتأسيس في اللغة العربية، مع معلمين متخصصين وخطط تعليمية تناسب مستوى كل طالب.</p>
+      <div class="hero-btns">
+        <button class="btn-primary open-modal-btn" data-i18n="hero_btn_book">🎁 احجز حصة تجريبية مجانية</button>
+        <a href="https://wa.me/201130713187?text=السلام عليكم، أريد الاستفسار عن أكاديمية القارئ وحجز حصة تجريبية مجانية." target="_blank" rel="noopener noreferrer" class="btn-wa" data-i18n="hero_btn_wa">💬 تواصل معنا عبر واتساب</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal visible">
+        <img src="assets/logo.jpg" alt="أكاديمية القارئ Logo">
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-bar">
+  <div class="container stats-grid reveal">
+    <div class="stat-item">
+      <div class="stat-icon">👥</div>
+      <div class="stat-num">+100</div>
+      <div class="stat-label" data-i18n="stat_students">طالب</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon">⭐</div>
+      <div class="stat-num">4.5</div>
+      <div class="stat-label" data-i18n="stat_rating" >تقييم الطلاب للأكاديمية  </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon">🎁</div>
+      <div class="stat-label" data-i18n="stat_free">حصة نجريبية</div>
+      <div class="stat-num" data-i18n="stat_free_val">مجانية </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon">🌍</div>
+      <div class="stat-num" data-i18n="stat_online_val">أونلاين</div>
+      <div class="stat-label" data-i18n="stat_online">تعليم عن بعد</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container reveal">
+    <div class="about-grid">
+        <div>
+            <div class="section-tag" data-i18n="about_tag">من نحن؟</div>
+            <h2 class="section-title" data-i18n="about_title">أكاديمية القارئ</h2>
+            <p class="section-sub" data-i18n="about_desc">منصة تعليمية متخصصة في تعليم القرآن الكريم وعلومه أونلاين، نقدم برنامجًا تعليميًا متكاملًا لحفظ القرآن الكريم وإتقان التجويد، والتأسيس الصحيح في اللغة العربية، وعلوم الحديث والتفسير، بأسلوب احترافي يجمع بين الإتقان الشرعي والوسائل التعليمية الحديثة.</p>
+        </div>
+        <div>
+            <div class="about-card">
+                <h3 data-i18n="mission_title">🎯 رسالتنا</h3>
+                <p data-i18n="mission_desc">تقديم تعليم قرآني وشرعي متكامل يجمع بين الإتقان، والمتابعة الفردية، والوسائل التعليمية الحديثة.</p>
+            </div>
+            <div class="about-card">
+                <h3 data-i18n="vision_title">👁️ رؤيتنا</h3>
+                <p data-i18n="vision_desc">الوصول بالتعليم القرآني وعلومه إلى كل من يرغب في التعلم، أينما كان. هدفنا بناء جيل متقن لكتاب الله، عامل به، ونشر علوم القرآن لكل من يطلبها.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container reveal">
+    <div class="text-center">
+        <div class="section-tag" data-i18n="services_tag">خدماتنا</div>
+        <h2 class="section-title" data-i18n="services_title">برامج الأكاديمية</h2>
+        <p class="section-sub text-center" data-i18n="services_sub">نقدم مجموعة متنوعة من البرامج التعليمية التي تناسب جميع الأعمار والمستويات.</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📖</div>
+        <h3 class="service-title" data-i18n="srv_1_title">حفظ القرآن الكريم</h3>
+        <p class="service-text" data-i18n="srv_1_desc">خطط منهجية للحفظ والمراجعة تناسب قدرات كل طالب.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎙️</div>
+        <h3 class="service-title" data-i18n="srv_2_title">التلقين وتصحيح القراءة</h3>
+        <p class="service-text" data-i18n="srv_2_desc">تصحيح التلاوة والتلقين الصحيح على يد معلمين مجازين.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📚</div>
+        <h3 class="service-title" data-i18n="srv_3_title">التجويد وأحكامه</h3>
+        <p class="service-text" data-i18n="srv_3_desc">دراسة أحكام التجويد النظرية وتطبيقها عملياً بإتقان.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📜</div>
+        <h3 class="service-title" data-i18n="srv_4_title">التفسير</h3>
+        <p class="service-text" data-i18n="srv_4_desc">فهم معاني القرآن الكريم وتدبر آياته العظيمة.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🕌</div>
+        <h3 class="service-title" data-i18n="srv_5_title">العلوم الشرعية</h3>
+        <p class="service-text" data-i18n="srv_5_desc">دراسة مبسطة وشاملة لعلوم الحديث والفقه والعقيدة.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📘</div>
+        <h3 class="service-title" data-i18n="srv_6_title">نور البيان للأطفال</h3>
+        <p class="service-text" data-i18n="srv_6_desc">تأسيس القراءة والكتابة باللغة العربية بطريقة صحيحة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container reveal">
+    <div class="text-center">
+        <div class="section-tag" data-i18n="process_tag">طريقتنا</div>
+        <h2 class="section-title" data-i18n="process_title">ماذا تتضمن الحصة؟</h2>
+        <p class="section-sub text-center" data-i18n="process_sub">خطوات متسلسلة لضمان أقصى استفادة للطالب خلال الحصة التعليمية.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h3 class="step-title" data-i18n="step_1_title">التلقين والتصحيح</h3>
+        <p class="step-text" data-i18n="step_1_desc">تلقين الآيات الجديدة وتصحيح قراءة الطالب.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h3 class="step-title" data-i18n="step_2_title">الحفظ والمراجعة</h3>
+        <p class="step-text" data-i18n="step_2_desc">تسميع الحفظ الجديد ومراجعة ما سبق حفظه.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h3 class="step-title" data-i18n="step_3_title">تطبيق التجويد</h3>
+        <p class="step-text" data-i18n="step_3_desc">التركيز على استخراج وتطبيق أحكام التجويد.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h3 class="step-title" data-i18n="step_4_title">التفسير والفهم</h3>
+        <p class="step-text" data-i18n="step_4_desc">شرح مبسط لمعاني الآيات ومقاصدها.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">05</div>
+        <h3 class="step-title" data-i18n="step_5_title">العلوم الشرعية</h3>
+        <p class="step-text" data-i18n="step_5_desc">فقرة للعلوم الشرعية حسب برنامج الطالب.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">06</div>
+        <h3 class="step-title" data-i18n="step_6_title">المتابعة والتقييم</h3>
+        <p class="step-text" data-i18n="step_6_desc">متابعة مستمرة لمستوى الطالب وقياس تقدمه.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container reveal">
+    <div class="text-center">
+        <div class="section-tag" data-i18n="features_tag">لماذا نحن؟</div>
+        <h2 class="section-title" data-i18n="features_title">مميزات الأكاديمية</h2>
+    </div>
+    
+    <div class="features-list">
+        <div class="feature-item">
+            <span>👩‍🏫</span>
+            <span data-i18n="feat_1">نخبة من المعلمين والمعلمات</span>
+        </div>
+        <div class="feature-item">
+            <span>📜</span>
+            <span data-i18n="feat_2">معلمون مجازون بالسند المتصل للنبي ﷺ</span>
+        </div>
+        <div class="feature-item">
+            <span>📚</span>
+            <span data-i18n="feat_3">متخصصون في التأسيس والتجويد</span>
+        </div>
+        <div class="feature-item">
+            <span>📈</span>
+            <span data-i18n="feat_4">إشراف خاص لكل طالب للمتابعة</span>
+        </div>
+        <div class="feature-item">
+            <span>⏰</span>
+            <span data-i18n="feat_5">مواعيد مرنة طوال اليوم تناسبك</span>
+        </div>
+        <div class="feature-item">
+            <span>🌍</span>
+            <span data-i18n="feat_6">تعليم أونلاين (Zoom / Google Meet)</span>
+        </div>
+        <div class="feature-item">
+            <span>📞</span>
+            <span data-i18n="feat_7">خدمة عملاء على مدار 24 ساعة</span>
+        </div>
+        <div class="feature-item">
+            <span>💳</span>
+            <span data-i18n="feat_8">طرق دفع سهلة (حساب أردني متاح)</span>
+        </div>
+        <div class="feature-item">
+            <span>🏅</span>
+            <span data-i18n="feat_9">شهادات خاصة للمجتازين</span>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING PACKAGES (تمت الإضافة) -->
+<section class="container reveal" id="pricing">
+  <div class="text-center">
+    <div class="section-tag" data-i18n="pricing_tag">خطط الدراسة</div>
+    <h2 class="section-title" data-i18n="pricing_title">باقات الاشتراك</h2>
+    <p class="section-sub text-center" data-i18n="pricing_sub">اختر نظام الحصص المناسب لك، واستفد من المتابعة الفردية وجودة التعليم.</p>
+  </div>
+  <div class="pricing-grid">
+    <!-- باقة الإتقان 3D -->
+    <div class="pricing-card">
+      <div class="badge-3d" data-i18n="most_followed">الأكثر متابعة</div>
+      <h3 data-i18n="pkg_itqan_title">باقة الإتقان</h3>
+      <ul class="pricing-features">
+        <li><span data-i18n="pkg_itqan_f1">3 حصص أسبوعيًا</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_itqan_f2">12 حصة شهريًا</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_itqan_f3">مدة الحصة: 30 دقيقة</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_itqan_f4">حصة فردية</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_itqan_f5">تلقين ومراجعة منتظمة</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_itqan_f6">تصحيح التجويد</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_itqan_f7">متابعة تقدم الطالب</span> <span class="check">✔️</span></li>
+      </ul>
+      <button class="btn-3d open-modal-btn" data-i18n="book_trial_btn">احجز حصتك التجريبية</button>
+    </div>
+    <!-- باقة النور 3D -->
+    <div class="pricing-card">
+      <h3 data-i18n="pkg_noor_title">باقة النور</h3>
+      <ul class="pricing-features">
+        <li><span data-i18n="pkg_noor_f1">حصتان أسبوعيًا</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_noor_f2">8 حصص شهريًا</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_noor_f3">مدة الحصة: 30 دقيقة</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_noor_f4">حصة فردية</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_noor_f5">تلقين ومراجعة منتظمة</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_noor_f6">تصحيح التجويد</span> <span class="check">✔️</span></li>
+        <li><span data-i18n="pkg_noor_f7">متابعة تقدم الطالب</span> <span class="check">✔️</span></li>
+      </ul>
+      <button class="btn-3d open-modal-btn" data-i18n="book_trial_btn">احجز حصتك التجريبية</button>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY DISCOUNTS (تمت الإضافة) -->
+<section class="container reveal" id="discounts">
+  <div class="text-center">
+    <div class="section-tag" data-i18n="discounts_tag">عروض خاصة</div>
+    <h2 class="section-title" data-i18n="discounts_title">خصومات خاصة للأخوة والعائلات</h2>
+    <p class="section-sub text-center" data-i18n="discounts_sub">لأن القرآن يجمع البيت، وفرنا أنظمة خاصة تساعد العائلات على التعلم معًا والاستفادة من خصومات الاشتراك.</p>
+  </div>
+  <div class="discounts-grid">
+    <!-- Family Card -->
+    <div class="pricing-card pricing-card--wide">
+      <h3 data-i18n="family_discount_title">👨‍👩‍👧‍👦 خصم العائلة</h3>
+      <p class="discount-lead" data-i18n="family_discount_sub">للعائلات التي تضم أربعة إخوة، نوفر نظام اشتراك عائلي بخصم خاص مع الحفاظ على الحصة الفردية لكل طالب.</p>
+      <div class="discount-box">
+        <h4 data-i18n="family_details_title">تفاصيل النظام العائلي</h4>
+        <ul class="pricing-features">
+          <li><span class="dot">•</span> <span data-i18n="fam_f1">حصتان أو 3 حصص أسبوعيًا لكل طالب</span></li>
+          <li><span class="dot">•</span> <span data-i18n="fam_f2">8 أو 12 حصة شهريًا لكل طالب</span></li>
+          <li><span class="dot">•</span> <span data-i18n="fam_f3">خصم عائلي خاص يصل إلى 25%</span></li>
+          <li><span class="dot">•</span> <span data-i18n="fam_f4">حفظ الحصة الفردية المستقلة لكل ابن</span></li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201130713187" target="_blank" class="btn-3d btn-outline-navy" style="margin-top: 20px; display: block; text-align: center;" data-i18n="inquire_family">💬 استفسر عن باقات العائلة</a>
+    </div>
+    <!-- Siblings Card -->
+    <div class="pricing-card pricing-card--wide">
+      <h3 data-i18n="siblings_discount_title">👬 نظام الأخوين</h3>
+      <p class="discount-lead" data-i18n="siblings_discount_sub">لكل طالب حصة فردية خاصة به.</p>
+      <div class="discount-box">
+        <h4 data-i18n="sib_op1_title">الخيار الأول</h4>
+        <ul class="pricing-features">
+          <li><span class="dot">•</span> <span data-i18n="sib_op1_f1">حصتان أسبوعيًا لكل طالب</span></li>
+          <li><span class="dot">•</span> <span data-i18n="sib_op1_f2">8 حصص شهريًا لكل طالب</span></li>
+          <li><span class="dot">•</span> <span data-i18n="sib_op1_f3">خصم خاص على اشتراك الأخوين</span></li>
+        </ul>
+      </div>
+      <div class="discount-box" style="margin-top: 15px;">
+        <h4 data-i18n="sib_op2_title">الخيار الثاني</h4>
+        <ul class="pricing-features">
+          <li><span class="dot">•</span> <span data-i18n="sib_op2_f1">3 حصص أسبوعيًا لكل طالب</span></li>
+          <li><span class="dot">•</span> <span data-i18n="sib_op2_f2">12 حصة شهريًا لكل طالب</span></li>
+          <li><span class="dot">•</span> <span data-i18n="sib_op2_f3">خصم خاص على اشتراك الأخوين</span></li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201130713187" target="_blank" class="btn-3d btn-outline-navy" style="margin-top: 20px; display: block; text-align: center;" data-i18n="inquire_siblings">💬 استفسر عن خصم الأخوين</a>
+    </div>
+  </div>
+</section>
+
+<!-- HELP BANNER CTA (تمت الإضافة) -->
+<section class="container reveal" style="margin-top: 2rem;">
+  <div class="help-banner-content">
+    <h2 data-i18n="help_title">مش عارف أي نظام مناسب لك؟</h2>
+    <p data-i18n="help_sub">احجز الحصة التجريبية المجانية، وساعدنا نحدد البرنامج ونظام الحصص الأنسب لك.</p>
+    <div class="help-btns">
+      <button class="btn-3d open-modal-btn" data-i18n="book_trial_help">📝 احجز الحصة التجريبية</button>
+      <a href="https://wa.me/201130713187" target="_blank" class="btn-3d btn-3d--wa" data-i18n="wa_help">💬 تواصل معنا عبر واتساب</a>
+    </div>
+  </div>
+</section>
+
+<!-- CHILDREN SECTION -->
+
+<!-- BOOKING CTA -->
+<section class="container reveal" id="booking">
+    <div class="booking-cta">
+        <h2 class="section-title" data-i18n="cta_title">ابدأ رحلتك مع القرآن بحصة تجريبية مجانية 🎁</h2>
+        <p class="section-sub text-center" data-i18n="cta_sub">تعرّف على طريقة التعليم، وتواصل مع المعلم، واختر الوقت المناسب لك، وابدأ رحلتك مع القرآن الكريم.</p>
+        <div style="margin-top: 2rem;">
+            <button class="btn-primary open-modal-btn" data-i18n="cta_btn">📅 اضغط هنا لحجز حصتك التجريبية الآن</button>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL POPUP FOR BOOKING FORM -->
+<div class="modal-overlay" id="booking-modal" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" id="modal-close-btn" aria-label="إغلاق النافذة">&times;</button>
+        <h3 id="modal-title" class="modal-title" data-i18n="modal_heading" style="text-align: center; margin-bottom: 20px;">نموذج حجز الحصة التجريبية</h3>
+        
+        <div class="form-container" style="padding: 10px 0;">
+            <form id="academy-register-form" style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- حقل الاسم -->
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: 500;" data-i18n="form_name">الاسم ثلاثي</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+                </div>
+
+                <!-- حقل العمر -->
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: 500;" data-i18n="form_age">العمر</label>
+                    <input type="number" name="age" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+                </div>
+                
+                <!-- حقل الواتساب -->
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: 500;" data-i18n="form_whatsapp">رقم الواتساب</label>
+                    <input type="tel" name="whatsapp" dir="ltr" placeholder="+20..." required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box; text-align: right;">
+                </div>
+
+                <!-- حقل الموعد -->
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: 500;" data-i18n="form_appointment">الموعد المناسب للحصة</label>
+                    <input type="datetime-local" name="appointment" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+                </div>
+                
+                <button type="submit" class="btn-primary" id="submit-btn" style="width: 100%; margin-top: 10px; padding: 12px; font-size: 16px; border: none; cursor: pointer;" data-i18n="form_submit">تأكيد الحجز</button>
+                <p id="form-message" style="text-align: center; font-weight: bold; margin-top: 10px; display: none;"></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container reveal">
+    <div class="text-center">
+        <div class="section-tag" data-i18n="faq_tag">استفسارات</div>
+        <h2 class="section-title" data-i18n="faq_title">الأسئلة الشائعة</h2>
+    </div>
+    
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1"><span data-i18n="faq_1_q">هل الدراسة أونلاين؟</span> <span class="faq-arrow">▼</span></button>
+        <div id="faq-a-1" class="faq-a"><p data-i18n="faq_1_a">نعم، يتم التعليم عن بعد بشكل تفاعلي ومباشر باستخدام منصات Zoom أو Google Meet.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2"><span data-i18n="faq_2_q">هل توجد حصة تجريبية؟</span> <span class="faq-arrow">▼</span></button>
+        <div id="faq-a-2" class="faq-a"><p data-i18n="faq_2_a">نعم، نقدم حصة تجريبية مجانية لتقييم المستوى والتعرف على المعلم وطريقة الشرح.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3"><span data-i18n="faq_3_q">هل الأكاديمية مناسبة للأطفال؟</span> <span class="faq-arrow">▼</span></button>
+        <div id="faq-a-3" class="faq-a"><p data-i18n="faq_3_a">نعم، توجد برامج خاصة مصممة للأطفال ومنها منهج "نور البيان" لتأسيس القراءة والكتابة.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4"><span data-i18n="faq_4_q">هل يمكن اختيار موعد مناسب؟</span> <span class="faq-arrow">▼</span></button>
+        <div id="faq-a-4" class="faq-a"><p data-i18n="faq_4_a">نعم، نوفر مواعيد مرنة طوال اليوم لاختيار ما يناسب جدولك، وذلك حسب التوفر.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5"><span data-i18n="faq_5_q">هل يوجد متابعة للطالب؟</span> <span class="faq-arrow">▼</span></button>
+        <div id="faq-a-5" class="faq-a"><p data-i18n="faq_5_a">بالتأكيد، يوجد إشراف خاص ومتابعة دورية لتقدم مستوى الطالب وتواصل مستمر لضمان أفضل النتائج.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6"><span data-i18n="faq_6_q">هل تقدم الأكاديمية التجويد؟</span> <span class="faq-arrow">▼</span></button>
+        <div id="faq-a-6" class="faq-a"><p data-i18n="faq_6_a">نعم، يتم تعليم أحكام التجويد النظرية وتطبيقها عملياً أثناء التلاوة والحفظ.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-7"><span data-i18n="faq_7_q">هل توجد شهادات؟</span> <span class="faq-arrow">▼</span></button>
+        <div id="faq-a-7" class="faq-a"><p data-i18n="faq_7_a">نعم، تُمنح شهادات خاصة للطلاب عند إتمامهم للبرامج أو المراحل التعليمية بنجاح.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+            <img src="assets/logo.jpg" alt="أكاديمية القارئ">
+            <h2 class="footer-brand-title">أكاديمية القارئ | ALQAREE</h2>
+        </div>
+        <p class="footer-about" data-i18n="footer_desc">منصة تعليمية لتحفيظ القرآن الكريم عن بُعد، نقدّم برنامجًا تعليميًا متكاملًا لحفظ القرآن وإتقان التجويد، والتأسيس الصحيح في اللغة العربية، وعلوم الحديث والتفسير.</p>
+      </div>
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer_links_title">روابط هامة</h4>
+        <ul class="footer-links">
+          <li><a href="#home" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="#about" data-i18n="nav_about">عن الأكاديمية</a></li>
+          <li><a href="#services" data-i18n="nav_services">برامجنا</a></li>
+          <li><a href="#features" data-i18n="nav_features">مميزاتنا</a></li>
+          <li><a href="#booking" class="open-modal-btn footer-link-btn" data-i18n="book_now">حجز حصة تجريبية</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer_contact_title">تواصل معنا</h4>
+        <div class="footer-contact">
+            <p data-i18n="footer_phone">📞 رقم الأكاديمية: +20 11 30713187</p>
+            <p data-i18n="footer_online">🌍 تعليم أونلاين</p>
+        </div>
+        <a href="https://wa.me/201130713187?text=السلام عليكم، أريد الاستفسار عن أكاديمية القارئ وحجز حصة تجريبية مجانية." target="_blank" rel="noopener noreferrer" class="footer-wa-btn" data-i18n="footer_wa_btn">💬 تواصل عبر واتساب</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer_rights">© جميع الحقوق محفوظة لأكاديمية القارئ</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <a href="https://wa.me/201130713187?text=السلام عليكم، أريد الاستفسار عن أكاديمية القارئ وحجز حصة تجريبية مجانية." target="_blank" rel="noopener noreferrer" class="wa-float-btn" aria-label="تواصل معنا عبر واتساب">
+    <svg viewBox="0 0 32 32">
+      <path d="M16 2a13.94 13.94 0 0 0-12 21l-2 7 7-2a13.94 13.94 0 1 0 7-26zm0 25.5a11.5 11.5 0 0 1-5.8-1.6l-.4-.2-4.3 1.1 1.1-4.2-.3-.4A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.1-2.3.1s-.6.5-.8.8-.4.4-.7.2a9.1 9.1 0 0 1-5.1-5.1c-.2-.3 0-.5.2-.7s.5-.6.8-.8.1-.4 0-.7l-1-2.4c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.8.1-1.2.6a5.2 5.2 0 0 0-1.6 3.9 9.1 9.1 0 0 0 1.9 4.8 18.5 18.5 0 0 0 7.6 6.7 8.3 8.3 0 0 0 2.6.5c1.2 0 2.3-.5 3.1-1.4a3.8 3.8 0 0 0 .3-2.5c-.2-.1-.5-.2-.8-.3z"/>
+    </svg>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
