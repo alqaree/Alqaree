@@ -70,8 +70,6 @@ const translations = {
     feat_7: "خدمة عملاء على مدار 24 ساعة",
     feat_8: "طرق دفع سهلة (حساب أردني متاح)",
     feat_9: "شهادات خاصة للمجتازين",
-    
-    /* تمت الإضافة: تراجم الأقسام الجديدة */
     pricing_tag: "خطط الدراسة",
     pricing_title: "باقات الاشتراك",
     pricing_sub: "اختر نظام الحصص المناسب لك، واستفد من المتابعة الفردية وجودة التعليم.",
@@ -93,7 +91,6 @@ const translations = {
     pkg_noor_f6: "تصحيح التجويد",
     pkg_noor_f7: "متابعة تقدم الطالب",
     book_trial_btn: "احجز حصتك التجريبية",
-    
     discounts_tag: "عروض خاصة",
     discounts_title: "خصومات خاصة للأخوة والعائلات",
     discounts_sub: "لأن القرآن يجمع البيت، وفرنا أنظمة خاصة تساعد العائلات على التعلم معًا والاستفادة من خصومات الاشتراك.",
@@ -105,7 +102,6 @@ const translations = {
     fam_f3: "خصم عائلي خاص يصل إلى 25%",
     fam_f4: "حفظ الحصة الفردية المستقلة لكل ابن",
     inquire_family: "💬 استفسر عن باقات العائلة",
-    
     siblings_discount_title: "👬 نظام الأخوين",
     siblings_discount_sub: "لكل طالب حصة فردية خاصة به.",
     sib_op1_title: "الخيار الأول",
@@ -117,13 +113,10 @@ const translations = {
     sib_op2_f2: "12 حصة شهريًا لكل طالب",
     sib_op2_f3: "خصم خاص على اشتراك الأخوين",
     inquire_siblings: "💬 استفسر عن خصم الأخوين",
-    
     help_title: "مش عارف أي نظام مناسب لك؟",
     help_sub: "احجز الحصة التجريبية المجانية، وساعدنا نحدد البرنامج ونظام الحصص الأنسب لك.",
     book_trial_help: "📝 احجز الحصة التجريبية",
     wa_help: "💬 تواصل معنا عبر واتساب",
-    /* نهاية الإضافات */
-
     children_title: "برامج مصممة لأطفالك 🧒",
     children_sub: "نولي اهتماماً خاصاً بالأطفال لتنشئتهم على حب القرآن الكريم وتعلم اللغة العربية تأسيساً صحيحاً في بيئة تعليمية محفزة.",
     tag_1: "نور البيان",
@@ -236,8 +229,6 @@ const translations = {
     feat_7: "24/7 Customer Service",
     feat_8: "Easy Payment Methods",
     feat_9: "Special Certificates for Achievers",
-    
-    /* English Translations for New Sections */
     pricing_tag: "Study Plans",
     pricing_title: "Subscription Packages",
     pricing_sub: "Choose the suitable class system and benefit from individual follow-up and quality education.",
@@ -259,7 +250,6 @@ const translations = {
     pkg_noor_f6: "Tajweed correction",
     pkg_noor_f7: "Student progress tracking",
     book_trial_btn: "Book Trial Class",
-    
     discounts_tag: "Special Offers",
     discounts_title: "Discounts for Siblings & Families",
     discounts_sub: "Because the Quran brings homes together, we offer systems helping families learn together with discounts.",
@@ -271,7 +261,6 @@ const translations = {
     fam_f3: "Special family discount up to 25%",
     fam_f4: "Independent private class for each child",
     inquire_family: "💬 Inquire about Family Packages",
-    
     siblings_discount_title: "👬 Siblings System",
     siblings_discount_sub: "A dedicated private class for each student.",
     sib_op1_title: "First Option",
@@ -283,13 +272,10 @@ const translations = {
     sib_op2_f2: "12 classes/month per student",
     sib_op2_f3: "Special discount on siblings' sub.",
     inquire_siblings: "💬 Inquire about Siblings Discount",
-    
     help_title: "Not sure which system suits you?",
     help_sub: "Book a free trial, and let us help you choose the best program and schedule.",
     book_trial_help: "📝 Book a Trial Class",
     wa_help: "💬 Contact via WhatsApp",
-    /* End of English additions */
-
     children_title: "Programs Designed for Your Kids 🧒",
     children_sub: "We pay special attention to children to raise them on loving the Quran and learning Arabic properly in a motivating environment.",
     tag_1: "Noor Al-Bayan",
@@ -359,94 +345,103 @@ if (menuBtn && mobileMenu) {
 
 // 2. Navbar Scroll Effect
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 20) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+}
 
 // 3. FAQ Accordion
 const faqItems = document.querySelectorAll('.faq-item');
 faqItems.forEach(item => {
   const btn = item.querySelector('.faq-q');
-  btn.addEventListener('click', () => {
-    const isOpen = item.classList.contains('open');
-    faqItems.forEach(i => {
-      i.classList.remove('open');
-      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      faqItems.forEach(i => {
+        i.classList.remove('open');
+        const qBtn = i.querySelector('.faq-q');
+        if (qBtn) qBtn.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     });
-    if (!isOpen) {
-      item.classList.add('open');
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  });
+  }
 });
 
 // 4. Scroll Reveal Observer
 const reveals = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
+if (reveals.length > 0) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
 
-reveals.forEach(reveal => revealObserver.observe(reveal));
+  reveals.forEach(reveal => revealObserver.observe(reveal));
+}
 
-// 5. Booking Modal Popup Logic
+// 5. Booking Modal Popup Logic (محمي في حال عدم وجود المودال)
 const modal = document.getElementById('booking-modal');
 const openModalBtns = document.querySelectorAll('.open-modal-btn');
 const closeModalBtn = document.getElementById('modal-close-btn');
 
-let lastFocusedTrigger = null;
+if (modal) {
+  let lastFocusedTrigger = null;
 
-openModalBtns.forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    lastFocusedTrigger = btn;
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    if (menuBtn) menuBtn.classList.remove('active');
-    if (mobileMenu && mobileMenu.classList.contains('open')) {
-      mobileMenu.classList.remove('open');
-      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-    }
-    // Move focus into the dialog for screen-reader/keyboard users
-    window.setTimeout(() => closeModalBtn.focus(), 50);
+  openModalBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      lastFocusedTrigger = btn;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (menuBtn) menuBtn.classList.remove('active');
+      if (mobileMenu && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+      }
+      if (closeModalBtn) {
+        window.setTimeout(() => closeModalBtn.focus(), 50);
+      }
+    });
   });
-});
 
-const closeModal = () => {
-  modal.classList.remove('open');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-  if (lastFocusedTrigger) lastFocusedTrigger.focus();
-};
+  const closeModal = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocusedTrigger) lastFocusedTrigger.focus();
+  };
 
-closeModalBtn.addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) closeModal();
-});
-document.addEventListener('keydown', (e) => {
-  if (!modal.classList.contains('open')) return;
-  if (e.key === 'Escape') { closeModal(); return; }
-  // Simple focus trap: keep Tab navigation inside the dialog
-  if (e.key === 'Tab') {
-    const focusable = modal.querySelectorAll('button, [href], iframe, [tabindex]:not([tabindex="-1"])');
-    if (!focusable.length) return;
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    if (e.shiftKey && document.activeElement === first) {
-      e.preventDefault(); last.focus();
-    } else if (!e.shiftKey && document.activeElement === last) {
-      e.preventDefault(); first.focus();
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('open')) return;
+    if (e.key === 'Escape') { closeModal(); return; }
+    if (e.key === 'Tab') {
+      const focusable = modal.querySelectorAll('button, [href], iframe, [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
     }
-  }
-});
+  });
+}
 
 // 6. Dark / Light Mode Toggle
 const themeToggleBtn = document.getElementById('theme-toggle-btn');
@@ -484,7 +479,6 @@ const setLanguage = (lang) => {
   if (langToggleBtn) langToggleBtn.textContent = lang === 'ar' ? 'EN' : 'AR';
   if (mobileLangBtn) mobileLangBtn.textContent = lang === 'ar' ? 'English' : 'العربية';
 
-  // Update text elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
@@ -503,46 +497,50 @@ const toggleLanguage = () => {
 
 if (langToggleBtn) langToggleBtn.addEventListener('click', toggleLanguage);
 if (mobileLangBtn) mobileLangBtn.addEventListener('click', toggleLanguage);
-// --- كود إرسال بيانات نموذج الحجز إلى Google Sheets ---
+
+// 8. كود إرسال بيانات نموذج الحجز والتحويل لصفحة الشكر
 document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('academy-register-form');
     
-    if(form) {
+    if (form) {
         form.addEventListener('submit', function(e) {
+            // منع إعادة تحميل الصفحة أو إرسال البيانات عبر URL
             e.preventDefault(); 
             
             var submitBtn = document.getElementById('submit-btn');
             var message = document.getElementById('form-message');
-            
-            // الرابط الخاص بشيت جوجل الخاص بك
             var scriptURL = 'https://script.google.com/macros/s/AKfycbxVFI5QN3xjATd-SBG59rEalIsNcDaP95ezDdJ3ZBIiFVRcLc0HMNxmFQCtJO30Msn-/exec'; 
             
-            // حفظ النص الأصلي للزر
             var originalBtnText = submitBtn.innerText;
             var currentLang = document.documentElement.getAttribute('lang') || 'ar';
             
-            // تغيير حالة الزر أثناء التحميل
+            // تغيير النص وتعطيل الزر مؤقتاً
             submitBtn.innerText = currentLang === 'en' ? 'Sending Data...' : 'جاري إرسال البيانات...';
             submitBtn.disabled = true;
-            message.style.display = 'none';
+            if (message) message.style.display = 'none';
             
-            // تجميع بيانات الفورم
             var formData = new FormData(form);
             
-           // إرسال البيانات
+            // إرسال البيانات بالطريقة الخلفية POST
             fetch(scriptURL, { method: 'POST', body: formData })
                 .then(response => {
-                    // تغيير نص الزر لإعلام المستخدم أنه يتم تحويله
-                    submitBtn.innerText = currentLang === 'en' ? 'Redirecting...' : 'جاري التحويل...';
+                    if (message) {
+                        message.style.display = 'block';
+                        message.style.color = '#2ecc71';
+                        message.innerText = currentLang === 'en' ? 'Data saved! Redirecting...' : 'تم حفظ البيانات بنجاح! جاري تحويلك...';
+                    }
                     
-                    // 🚀 التعديل السحري: التحويل فوراً لصفحة الشكر بعد نجاح الإرسال
-                    window.location.href = 'thank-you.html'; 
+                    // التحويل المباشر لصفحة الشكر بعد 1.5 ثانية
+                    setTimeout(() => {
+                        window.location.href = 'thank-you.html';
+                    }, 1500);
                 })
                 .catch(error => {
-                    // رسالة الخطأ تبقى كما هي في حالة وجود مشكلة في الإرسال
-                    message.style.display = 'block';
-                    message.style.color = '#e74c3c';
-                    message.innerText = currentLang === 'en' ? 'An error occurred, please try again.' : 'حدث خطأ أثناء التسجيل، يرجى المحاولة مرة أخرى.';
+                    if (message) {
+                        message.style.display = 'block';
+                        message.style.color = '#e74c3c';
+                        message.innerText = currentLang === 'en' ? 'An error occurred, please try again.' : 'حدث خطأ أثناء التسجيل، يرجى المحاولة مرة أخرى.';
+                    }
                     
                     submitBtn.innerText = originalBtnText;
                     submitBtn.disabled = false;
