@@ -36,6 +36,7 @@ src="https://www.facebook.com/tr?id=1614909166922702&ev=PageView&noscript=1"
 <link rel="stylesheet" href="style.css">
 
 <style>
+    /* Booking Page Layout */
     .booking-page-container {
         max-width: 600px;
         margin: 100px auto 50px;
@@ -49,10 +50,53 @@ src="https://www.facebook.com/tr?id=1614909166922702&ev=PageView&noscript=1"
         color: var(--primary-color, #1B2A4A);
         margin-bottom: 10px;
     }
-    .booking-page-container p {
+    .booking-page-container p.subtitle {
         text-align: center;
         margin-bottom: 30px;
         color: var(--text-color, #333);
+    }
+
+    /* Form Styles */
+    .booking-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-family: inherit;
+        box-sizing: border-box;
+        background: var(--input-bg, #fff);
+        color: var(--text-color, #333);
+    }
+    .form-input.text-right {
+        text-align: right;
+    }
+    .btn-submit {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+    .form-message {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 10px;
+        display: none;
     }
 </style>
 </head>
@@ -60,7 +104,7 @@ src="https://www.facebook.com/tr?id=1614909166922702&ev=PageView&noscript=1"
 
 <!-- NAVBAR -->
 <nav id="navbar">
-  <a class="nav-logo" href="index.html">
+  <a class="nav-logo" href="/">
     <img src="assets/logo.jpg" alt="أكاديمية القارئ">
     <div class="nav-logo-text">
       <div class="nav-logo-ar" data-i18n="logo_ar">أكاديمية القارئ</div>
@@ -68,9 +112,9 @@ src="https://www.facebook.com/tr?id=1614909166922702&ev=PageView&noscript=1"
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
-    <li><a href="index.html#about" data-i18n="nav_about">عن الأكاديمية</a></li>
-    <li><a href="index.html#services" data-i18n="nav_services">البرامج</a></li>
+    <li><a href="/" data-i18n="nav_home">الرئيسية</a></li>
+    <li><a href="/#about" data-i18n="nav_about">عن الأكاديمية</a></li>
+    <li><a href="/#services" data-i18n="nav_services">البرامج</a></li>
   </ul>
   <div class="nav-actions">
     <button class="theme-toggle" id="theme-toggle-btn" aria-label="تبديل الوضع الليلي والنهاري">🌙</button>
@@ -82,35 +126,35 @@ src="https://www.facebook.com/tr?id=1614909166922702&ev=PageView&noscript=1"
 <section class="container">
     <div class="booking-page-container">
         <h2 data-i18n="modal_heading">نموذج حجز الحصة التجريبية</h2>
-        <p>يرجى إدخال بياناتك بدقة لنتواصل معك وتحديد موعد الحصة.</p>
+        <p class="subtitle">يرجى إدخال بياناتك بدقة لنتواصل معك وتحديد موعد الحصة.</p>
         
-        <form id="academy-register-form" style="display: flex; flex-direction: column; gap: 15px;">
+        <form id="academy-register-form" method="POST" class="booking-form">
             <!-- حقل الاسم -->
-            <div>
-                <label style="display: block; margin-bottom: 5px; font-weight: 500;" data-i18n="form_name">الاسم ثلاثي</label>
-                <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box; background: var(--input-bg, #fff); color: var(--text-color, #333);">
+            <div class="form-group">
+                <label class="form-label" data-i18n="form_name">الاسم ثلاثي</label>
+                <input type="text" name="name" class="form-input" required>
             </div>
 
             <!-- حقل العمر -->
-            <div>
-                <label style="display: block; margin-bottom: 5px; font-weight: 500;" data-i18n="form_age">العمر</label>
-                <input type="number" name="age" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box; background: var(--input-bg, #fff); color: var(--text-color, #333);">
+            <div class="form-group">
+                <label class="form-label" data-i18n="form_age">العمر</label>
+                <input type="number" name="age" class="form-input" required>
             </div>
             
             <!-- حقل الواتساب -->
-            <div>
-                <label style="display: block; margin-bottom: 5px; font-weight: 500;" data-i18n="form_whatsapp">رقم الواتساب</label>
-                <input type="tel" name="whatsapp" dir="ltr" placeholder="+20..." required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box; text-align: right; background: var(--input-bg, #fff); color: var(--text-color, #333);">
+            <div class="form-group">
+                <label class="form-label" data-i18n="form_whatsapp">رقم الواتساب</label>
+                <input type="tel" name="whatsapp" dir="ltr" placeholder="+20..." class="form-input text-right" required>
             </div>
 
-            <!-- حقل الموعد (بالتعديل الجديد) -->
-            <div>
-                <label style="display: block; margin-bottom: 5px; font-weight: 500;" data-i18n="form_appointment">الموعد المناسب للحصة</label>
-                <input type="text" name="appointment" placeholder="مثال: غداً بعد العصر، أو يوم الجمعة 5 مساءً..." required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; box-sizing: border-box; background: var(--input-bg, #fff); color: var(--text-color, #333);">
+            <!-- حقل الموعد -->
+            <div class="form-group">
+                <label class="form-label" data-i18n="form_appointment">الموعد المناسب للحصة</label>
+                <input type="text" name="appointment" placeholder="مثال: غداً بعد العصر، أو يوم الجمعة 5 مساءً..." class="form-input" required>
             </div>
             
-            <button type="submit" class="btn-primary" id="submit-btn" style="width: 100%; margin-top: 10px; padding: 12px; font-size: 16px; border: none; cursor: pointer;" data-i18n="form_submit">تأكيد الحجز</button>
-            <p id="form-message" style="text-align: center; font-weight: bold; margin-top: 10px; display: none;"></p>
+            <button type="submit" class="btn-primary btn-submit" id="submit-btn" data-i18n="form_submit">تأكيد الحجز</button>
+            <p id="form-message" class="form-message"></p>
         </form>
     </div>
 </section>
