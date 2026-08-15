@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="page_title">حجز الحصة التجريبية | أكاديمية القارئ</title>
+
+<!-- Facebook Domain Verification -->
+<meta name="facebook-domain-verification" content="b0ya1igfwfctsyfif7f6wbqthtu5ta" />
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1614909166922702');
+fbq('track', 'PageView');
+// حدث تتبع بدء الحجز
+fbq('track', 'InitiateCheckout'); 
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1614909166922702&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<meta name="description" content="احجز حصتك التجريبية المجانية الآن مع أكاديمية القارئ.">
+<meta name="theme-color" content="#1B2A4A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+    /* Booking Page Layout */
+    .booking-page-container {
+        max-width: 600px;
+        margin: 100px auto 50px;
+        padding: 30px;
+        background-color: var(--card-bg, #fff);
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .booking-page-container h2 {
+        text-align: center;
+        color: var(--primary-color, #1B2A4A);
+        margin-bottom: 10px;
+    }
+    .booking-page-container p.subtitle {
+        text-align: center;
+        margin-bottom: 30px;
+        color: var(--text-color, #333);
+    }
+
+    /* Form Styles */
+    .booking-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-family: inherit;
+        box-sizing: border-box;
+        background: var(--input-bg, #fff);
+        color: var(--text-color, #333);
+    }
+    .form-input.text-right {
+        text-align: right;
+    }
+    .btn-submit {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+    .form-message {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 10px;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a class="nav-logo" href="./index.html">
+    <img src="assets/logo.jpg" alt="أكاديمية القارئ">
+    <div class="nav-logo-text">
+      <div class="nav-logo-ar" data-i18n="logo_ar">أكاديمية القارئ</div>
+      <div class="nav-logo-en">ALQAREE ACADEMY</div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="./index.html" data-i18n="nav_home">الرئيسية</a></li>
+    <li><a href="./index.html#about" data-i18n="nav_about">عن الأكاديمية</a></li>
+    <li><a href="./index.html#services" data-i18n="nav_services">البرامج</a></li>
+    <li><a href="./index.html#features" data-i18n="nav_features">مميزاتنا</a></li>
+    <li><a href="./index.html#process" data-i18n="nav_process">كيف نعمل</a></li>
+    <li><a href="./index.html#faq" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="theme-toggle" id="theme-toggle-btn" aria-label="تبديل الوضع الليلي والنهاري">🌙</button>
+    <button class="lang-toggle" id="lang-toggle-btn" aria-label="تبديل اللغة">EN</button>
+  </div>
+
+  <button class="nav-hamburger" id="menu-btn" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="./index.html" class="mobile-link" data-i18n="nav_home">الرئيسية</a>
+  <a href="./index.html#about" class="mobile-link" data-i18n="nav_about">عن الأكاديمية</a>
+  <a href="./index.html#services" class="mobile-link" data-i18n="nav_services">البرامج</a>
+  <a href="./index.html#features" class="mobile-link" data-i18n="nav_features">مميزاتنا</a>
+  <a href="./index.html#process" class="mobile-link" data-i18n="nav_process">كيف نعمل</a>
+  <a href="./index.html#faq" class="mobile-link" data-i18n="nav_faq">الأسئلة الشائعة</a>
+  <div class="mobile-actions">
+    <button class="theme-toggle" id="mobile-theme-btn">🌙 الوضع الليلي</button>
+    <button class="lang-toggle" id="mobile-lang-btn">English</button>
+  </div>
+</div>
+
+<!-- MAIN BOOKING SECTION -->
+<section class="container">
+    <div class="booking-page-container">
+        <h2 data-i18n="modal_heading">نموذج حجز الحصة التجريبية</h2>
+        <p class="subtitle" data-i18n="booking_subtitle">يرجى إدخال بياناتك بدقة لنتواصل معك وتحديد موعد الحصة.</p>
+        
+        <form id="academy-register-form" method="POST" class="booking-form">
+            <!-- حقل الاسم -->
+            <div class="form-group">
+                <label class="form-label" data-i18n="form_name">الاسم ثلاثي</label>
+                <input type="text" name="name" class="form-input" required>
+            </div>
+
+            <!-- حقل العمر -->
+            <div class="form-group">
+                <label class="form-label" data-i18n="form_age">العمر</label>
+                <input type="number" name="age" class="form-input" required>
+            </div>
+            
+            <!-- حقل الواتساب -->
+            <div class="form-group">
+                <label class="form-label" data-i18n="form_whatsapp">رقم الواتساب</label>
+                <input type="tel" name="whatsapp" dir="ltr" placeholder="+20..." autocomplete="tel" class="form-input text-right" required>
+            </div>
+
+            <!-- حقل الموعد -->
+            <div class="form-group">
+                <label class="form-label" data-i18n="form_appointment">الموعد المناسب للحصة</label>
+                <input type="text" name="appointment" placeholder="مثال: غداً بعد العصر، أو يوم الجمعة 5 مساءً..." class="form-input" required>
+            </div>
+            
+            <button type="submit" class="btn-primary btn-submit" id="submit-btn" data-i18n="form_submit">تأكيد الحجز</button>
+            <p id="form-message" class="form-message"></p>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+            <img src="assets/logo.jpg" alt="أكاديمية القارئ">
+            <h2 class="footer-brand-title">أكاديمية القارئ | ALQAREE</h2>
+        </div>
+        <p class="footer-about" data-i18n="footer_desc">منصة تعليمية لتحفيظ القرآن الكريم عن بُعد، نقدّم برنامجًا تعليميًا متكاملًا لحفظ القرآن وإتقان التجويد، والتأسيس الصحيح في اللغة العربية، وعلوم الحديث والتفسير.</p>
+      </div>
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer_contact_title">تواصل معنا</h4>
+        <div class="footer-contact">
+            <p data-i18n="footer_phone">📞 رقم الأكاديمية: +20 11 30713187</p>
+            <p data-i18n="footer_online">🌍 تعليم أونلاين</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer_rights">© جميع الحقوق محفوظة لأكاديمية القارئ</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
